@@ -1,7 +1,17 @@
 Hash table:
+It only stores existing components, but needs extra memory for the hash table
+the access is O(1) on average but not very cache friendly, and adding or removing components is easy.
 
 Map:
+It only stores existing components but needs extra memory for the tree nodes
+the access is O(logN) and not very cache friendly, but adding and removing components is still easy.
 
 Sparse mapping 1:
+It uses O(NK) memory even if some components do not exist
+but the access is O(1) and cache friendly for the same entity
+while adding or removing entities may need to update indices.
 
 Sparse mapping 2:
+It also uses O(NK) memory and some extra memory for vectors
+the access is O(1) and cache friendly for the same component type
+but adding or removing entities may need to update multiple vectors.

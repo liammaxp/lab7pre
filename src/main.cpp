@@ -1,5 +1,5 @@
 #include "pack.h"
 
-int main() { 
+int main() {
     return 0;
 }
